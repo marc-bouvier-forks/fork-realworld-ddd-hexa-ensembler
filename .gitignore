@@ -16,3 +16,6 @@ target/
 
 ### Node Modules ###
 /node_modules/
+
+### Secrets
+!/source-env.sh

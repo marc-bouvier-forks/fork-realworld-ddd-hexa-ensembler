@@ -17,7 +17,8 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
-@Component
+// TODO : use conditional configuration to enable / disable it
+//@Component
 public class SendGridEmailer implements Emailer {
     private static final Logger LOGGER = LoggerFactory.getLogger(SendGridEmailer.class);
 

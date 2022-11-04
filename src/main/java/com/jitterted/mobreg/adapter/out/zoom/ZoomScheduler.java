@@ -21,7 +21,8 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 import java.util.Collections;
 
-@Component
+// TODO : use conditional configuration to enable / disable it
+//@Component
 public class ZoomScheduler implements VideoConferenceScheduler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZoomScheduler.class);

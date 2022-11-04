@@ -18,4 +18,4 @@ target/
 /node_modules/
 
 ### Secrets
-!/source-env.sh
+/source-env.sh

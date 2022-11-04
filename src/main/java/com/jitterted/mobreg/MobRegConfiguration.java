@@ -35,8 +35,8 @@ public class MobRegConfiguration {
     @Bean
     public CommandLineRunner commandLineRunner(MemberService memberService, MemberRepository memberRepository) {
         return args -> {
-            if (memberRepository.findByGithubUsername("tedyoung").isEmpty()) {
-                memberService.save(new Member("Ted", "tedyoung", "ROLE_USER", "ROLE_MEMBER", "ROLE_ADMIN"));
+            if (memberRepository.findByGithubUsername("marc-bouvier").isEmpty()) {
+                memberService.save(new Member("Marc", "marc-bouvier", "ROLE_USER", "ROLE_MEMBER", "ROLE_ADMIN"));
             }
         };
     }

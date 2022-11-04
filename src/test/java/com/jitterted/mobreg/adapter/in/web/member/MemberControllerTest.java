@@ -28,7 +28,7 @@ class MemberControllerTest {
     private static final MemberService CRASH_TEST_DUMMY_MEMBER_SERVICE = null;
 
     @Test
-    public void ensembleFormContainsMemberIdForOAuth2User() throws Exception {
+    public void Ensemble_form_contains_member_id_for_oauth_2_user() throws Exception {
         InMemoryEnsembleRepository ensembleRepository = new InMemoryEnsembleRepository();
         ensembleRepository.save(new Ensemble("GET Test", ZonedDateTime.now()));
         EnsembleService ensembleService = EnsembleServiceFactory.createServiceWith(ensembleRepository);
@@ -55,7 +55,7 @@ class MemberControllerTest {
     }
 
     @Test
-    public void memberRegistersForEnsembleWillBeRegisteredForThatEnsemble() throws Exception {
+    public void Member_registers_for_ensemble_will_be_registered_for_that_ensemble() throws Exception {
         InMemoryEnsembleRepository ensembleRepository = new InMemoryEnsembleRepository();
         Ensemble ensemble = ensembleRepository.save(new Ensemble("Test", ZonedDateTime.now()));
         InMemoryMemberRepository memberRepository = new InMemoryMemberRepository();
@@ -75,7 +75,7 @@ class MemberControllerTest {
     }
 
     @Test
-    public void memberDeclinesWillBeDeclinedForEnsemble() throws Exception {
+    public void Member_declines_will_be_declined_for_ensemble() throws Exception {
         InMemoryEnsembleRepository ensembleRepository = new InMemoryEnsembleRepository();
         Ensemble ensemble = ensembleRepository.save(new Ensemble("Test", ZonedDateTime.now()));
         InMemoryMemberRepository memberRepository = new InMemoryMemberRepository();

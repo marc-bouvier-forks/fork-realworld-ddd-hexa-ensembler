@@ -24,7 +24,7 @@ public class MemberProfileControllerTest {
     private static final @NotNull DefaultOAuth2User USER_WITH_MEMBER_ROLE = OAuth2UserFactory.createOAuth2UserWithMemberRole(GITHUB_USERNAME, "ROLE_MEMBER");
 
     @Test
-    public void profilePrepareFormFullyPopulatesForm() throws Exception {
+    public void Profile_prepare_form_fully_populates_form() throws Exception {
         InMemoryMemberRepository memberRepository = new InMemoryMemberRepository();
         Member member = MemberFactory.createMember(13, "first", GITHUB_USERNAME);
         member.changeEmailTo("member@example.com");
@@ -48,7 +48,7 @@ public class MemberProfileControllerTest {
     }
 
     @Test
-    public void changeProfileInfoOnFormUpdatesMemberProfileAndRedirectsToProfileView() throws Exception {
+    public void Change_profile_info_on_form_updates_member_profile_and_redirects_to_profile_view() throws Exception {
         TestMemberBuilder builder = new TestMemberBuilder()
                 .withEmail("none@nowhere")
                 .withGithubUsername(GITHUB_USERNAME)

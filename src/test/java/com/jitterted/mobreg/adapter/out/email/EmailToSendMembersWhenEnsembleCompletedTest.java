@@ -14,7 +14,7 @@ class EmailToSendMembersWhenEnsembleCompletedTest {
 
     // emails are only sent to Ensemble.acceptedMembers()
     @Test
-    public void emailsOnlySentToAcceptedMembers() throws Exception {
+    public void Emails_only_sent_to_accepted_members() throws Exception {
         EnsembleBuilderAndSaviour ensembleBuilder = new EnsembleBuilderAndSaviour();
         TestMemberBuilder memberBuilder = new TestMemberBuilder();
         Ensemble ensemble = ensembleBuilder.accept(memberBuilder.withEmail("accepted@example.com").buildAndSave())
@@ -32,7 +32,7 @@ class EmailToSendMembersWhenEnsembleCompletedTest {
     }
 
     @Test
-    public void emailContentIsFormattedCorrectly() throws Exception {
+    public void Email_content_is_formatted_correctly() throws Exception {
         EnsembleBuilderAndSaviour ensembleBuilder = new EnsembleBuilderAndSaviour();
         TestMemberBuilder memberBuilder = new TestMemberBuilder();
         Ensemble darkMode = ensembleBuilder

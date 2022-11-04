@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.*;
 class EnsembleServiceCompletedTest {
 
     @Test
-    public void completedEnsembleIsCompletedWithLinkAndSavedInRepository() throws Exception {
+    public void Completed_ensemble_is_completed_with_link_and_saved_in_repository() throws Exception {
         InMemoryEnsembleRepository ensembleRepository = new InMemoryEnsembleRepository();
         EnsembleService ensembleService = EnsembleServiceFactory.createServiceWith(ensembleRepository);
         Ensemble ensemble = new Ensemble("Completed", ZonedDateTime.now());
@@ -38,7 +38,7 @@ class EnsembleServiceCompletedTest {
     }
 
     @Test
-    public void completedEnsembleNotifiesAcceptedMembers() throws Exception {
+    public void Completed_ensemble_notifies_accepted_members() throws Exception {
         MockEnsembleCompletedNotifier mockEnsembleCompletedNotifier = new MockEnsembleCompletedNotifier();
         TestEnsembleServiceBuilder builder = new TestEnsembleServiceBuilder()
                 .notifier(mockEnsembleCompletedNotifier)

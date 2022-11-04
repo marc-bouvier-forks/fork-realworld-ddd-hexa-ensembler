@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.*;
 class EnsembleMemberRsvpTest {
 
     @Test
-    public void unregisteredMemberIsRsvpUnknown() throws Exception {
+    public void Unregistered_member_is_rsvp_unknown() throws Exception {
         Ensemble ensemble = EnsembleFactory.withStartTimeNow();
         MemberId memberId = MemberId.of(73);
 
@@ -16,7 +16,7 @@ class EnsembleMemberRsvpTest {
     }
 
     @Test
-    public void registeredMemberIsRsvpAccepted() throws Exception {
+    public void Registered_member_is_rsvp_accepted() throws Exception {
         Ensemble ensemble = EnsembleFactory.withStartTimeNow();
         MemberId memberId = MemberId.of(73);
 
@@ -27,7 +27,7 @@ class EnsembleMemberRsvpTest {
     }
 
     @Test
-    public void memberWhoDeclinesIsRsvpDeclined() throws Exception {
+    public void Member_who_declines_is_rsvp_declined() throws Exception {
         Ensemble ensemble = EnsembleFactory.withStartTimeNow();
         MemberId memberId = MemberId.of(97);
 
@@ -38,7 +38,7 @@ class EnsembleMemberRsvpTest {
     }
 
     @Test
-    public void acceptedMemberWhenDeclinesIsRsvpDeclined() throws Exception {
+    public void Accepted_member_when_declines_is_rsvp_declined() throws Exception {
         Ensemble ensemble = EnsembleFactory.withStartTimeNow();
         MemberId memberId = MemberId.of(97);
         ensemble.acceptedBy(memberId);
@@ -50,7 +50,7 @@ class EnsembleMemberRsvpTest {
     }
 
     @Test
-    public void declinedMemberWhenAcceptsAndSpaceAvailableIsRsvpAccepted() throws Exception {
+    public void Declined_member_when_accepts_and_space_available_is_rsvp_accepted() throws Exception {
         Ensemble ensemble = EnsembleFactory.withStartTimeNow();
         MemberId memberId = MemberId.of(79);
         ensemble.declinedBy(memberId);

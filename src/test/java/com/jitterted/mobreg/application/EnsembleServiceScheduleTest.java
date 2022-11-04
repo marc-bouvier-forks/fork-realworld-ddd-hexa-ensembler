@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.*;
 class EnsembleServiceScheduleTest {
 
     @Test
-    public void singleScheduledEnsembleIsReturnedForAllEnsembles() throws Exception {
+    public void Single_scheduled_ensemble_is_returned_for_all_ensembles() throws Exception {
         EnsembleService ensembleService = EnsembleServiceFactory.withDefaults();
 
         ensembleService.scheduleEnsemble("Name", ZonedDateTime.now());
@@ -23,7 +23,7 @@ class EnsembleServiceScheduleTest {
     }
 
     @Test
-    public void ensembleScheduledWithManuallyEnteredZoomLinkThenHasZoomLink() throws Exception {
+    public void Ensemble_scheduled_with_manually_entered_zoom_link_then_has_zoom_link() throws Exception {
         EnsembleService ensembleService = EnsembleServiceFactory.withDefaults();
 
         ensembleService.scheduleEnsemble("With Zoom", URI.create("https://zoom.us/j/123456?pwd=12345"), ZonedDateTime.now());
@@ -35,7 +35,7 @@ class EnsembleServiceScheduleTest {
     }
 
     @Test
-    public void ensembleScheduledThenZoomLinkFetchedFromApiHasConferenceDetails() throws Exception {
+    public void Ensemble_scheduled_then_zoom_link_fetched_from_api_has_conference_details() throws Exception {
         ConferenceDetails expectedConferenceDetails = new ConferenceDetails("123",
                                                                             URI.create("https://zoom.us/startUrl"),
                                                                             URI.create("https://zoom.us/joinUrl"));
@@ -50,7 +50,7 @@ class EnsembleServiceScheduleTest {
     }
 
     @Test
-    public void apiFailedToReturnValidConferenceDetailsThenConferenceDetailsIsDefaultUnscheduled() throws Exception {
+    public void Api_failed_to_return_valid_conference_details_then_conference_details_is_default_unscheduled() throws Exception {
         EnsembleService ensembleService = EnsembleServiceFactory.with(new FailsToCreateMeetingConferenceScheduler());
 
         ensembleService.scheduleEnsembleWithVideoConference("With Zoom", ZonedDateTime.now());

@@ -1,6 +1,8 @@
 package com.jitterted.mobreg.adapter.out.jdbc;
 
 import com.jitterted.mobreg.domain.Member;
+import org.junit.jupiter.api.DisplayNameGenerator;
+import org.junit.jupiter.api.IndicativeSentencesGeneration;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
@@ -10,8 +12,9 @@ import static org.assertj.core.api.Assertions.*;
 public class MemberDboTranslationTest {
 
     @Test
-    public void memberWithRolesTranslatedToEntityWithRoles() throws Exception {
+    public void Member_with_roles_translated_to_entity_with_roles() throws Exception {
         Member member = new Member("first", "githubuser", "ROLE_USER", "ROLE_MEMBER");
+        var indicativeSentences = new DisplayNameGenerator.IndicativeSentences();
 
         MemberDbo memberDbo = MemberDbo.from(member);
 
@@ -20,7 +23,7 @@ public class MemberDboTranslationTest {
     }
 
     @Test
-    public void entityWithRolesTranslatedToMemberWithRoles() throws Exception {
+    public void Entity_with_roles_translated_to_member_with_roles() throws Exception {
         MemberDbo memberDbo = new MemberDbo();
         memberDbo.firstName = "first";
         memberDbo.githubUsername = "githubusername";
@@ -35,7 +38,7 @@ public class MemberDboTranslationTest {
     }
 
     @Test
-    public void entityWithEmailTranslatedToDomainMemberWithEmail() throws Exception {
+    public void Entity_with_email_translated_to_domain_member_with_email() throws Exception {
         MemberDbo memberDbo = new MemberDbo();
         memberDbo.email = "member@example.com";
         memberDbo.firstName = "member";
@@ -51,7 +54,7 @@ public class MemberDboTranslationTest {
     }
 
     @Test
-    public void domainMemberWithEmailTranslatedToDataEntityWithEmail() throws Exception {
+    public void Domain_member_with_email_translated_to_data_entity_with_email() throws Exception {
         Member member = new Member("member", "ghuser", "ROLE_THREE");
         member.changeEmailTo("ghuser@example.com");
 

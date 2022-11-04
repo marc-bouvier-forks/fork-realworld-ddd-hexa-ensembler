@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 class MobParticipantsDtoCreationTest {
 
     @Test
-    public void convertsEnsembleToMobParticipantsDto() throws Exception {
+    public void Converts_ensemble_to_mob_participants_DTO() throws Exception {
         Ensemble ensemble = new Ensemble("test", ZonedDateTime.now());
         MemberService memberService = new DefaultMemberService(new InMemoryMemberRepository());
         Member member = new Member("Participant", "");
